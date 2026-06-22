@@ -8,7 +8,7 @@ on:
   push:
      paths: "*.py"
 
- jobs:
+jobs:
     code:
        runs-on: ubuntu-latest
        steps:
