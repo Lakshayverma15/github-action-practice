@@ -1,0 +1,20 @@
+#goal - i have to build test the code for backend, frontend, then push the image to docker hub
+
+name: CI
+on:
+   push:
+       branches: [master]
+
+jobs:
+    frontend:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Checkout code
+           uses: action/checkout@v7
+
+         - name: setup Nodejs
+           uses: action/checkouta@v6
+           with:
+            node-version: '20'
+            cache: npm install
+  
